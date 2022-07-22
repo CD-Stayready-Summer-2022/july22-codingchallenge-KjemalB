@@ -1,5 +1,8 @@
 package com.codedifferently;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Solution {
     /**
      * You will be given an integer called number and an array called possibleFamilyMembers
@@ -18,6 +21,11 @@ public class Solution {
      * @return
      */
     public Integer[] numberFamily(Integer number, Integer[] possibleFamilyMembers){
-        return null;
+        for (int i = 0; i < possibleFamilyMembers.length; i++){
+            if (number == i || number-1 == i || number+1 == i){
+                possibleFamilyMembers = new Integer[i];
+            }
+        }
+        return possibleFamilyMembers;
     }
 }
